@@ -1,2 +1,2 @@
 # AL104
-AL104 a encoding algorithm made by Anikin Luke Abales. 
+AL104 a simple Cipher made by Anikin Luke Abales. 
