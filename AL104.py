@@ -11,19 +11,23 @@ class AL104:
 		try:
 			return ''.join([self.__rev_cd[x[i:i+3]] for i in range(0, len(x), 3)])
 		except KeyError:
-			return "\n[decode-err]: Invalid cipher!"
-	
+			return "[decode-err]: Invalid cipher!"
+
+	def __str__(self):
+		print("AL104 cipher or AL1-04(Anikin Luke cipher)")		
+
+
 def main():
 	cipher = AL104()
 	line = "☲"*30
 	banner = f"\n{line}\n[1] == Encode\n[2] == Decode\n[0] == Exit\n{line}\nSelc-> "
-	ui = input(banner).lower()
+	ui = input(banner)
 	match(ui):
 		case '1':
-			print(f'\nResult [ {cipher.encode(input("Enter msg to encode: "))} ]')
+			print(f'\nResult: {cipher.encode(input("Enter msg to encode: "))}')
 			return True
 		case '2':
-			print(f'\nResult [ {cipher.decode(input("Enter cipher to decode: "))} ]')
+			print(f'\nResult: {cipher.decode(input("Enter cipher to decode: "))}')
 			return True
 		case '0':
 			print("\nBye bye!")
