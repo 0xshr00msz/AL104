@@ -5,7 +5,7 @@ class AL104:
 		self.__rev_cd = {v: k for k, v in self.__cd.items()}
 		#'!':'x-x','#':'k-k','@':'y>p','$':'4-A','%':'i~n','^':'ala','&':'kyu','*':'nin','(':'jaz',')':'y~~','-':'&ko','+':'&ka','{':'uwu','}':'owo','[':'Y.Y',']':'T.T','\\':')X(','/':'(x)','~':'exe','`':'det','.':'t%t',',':'bee','?':'que','<':'-l-','>':'-r-',"'":'~wu','"':'~~w'
 
-	def encode(self, ui)->exec:return ''.join([self.__cd.get(c) for c in ui])
+	def encode(self, ui)->exec:return ''.join([self.__cd.get(c, '<69>') for c in ui])
 
 	def decode(self, x):
 		try:
