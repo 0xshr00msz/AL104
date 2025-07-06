@@ -14,7 +14,7 @@ class AL104:
 			return "[decode-err]: Invalid cipher!"
 
 	def __str__(self):
-		print("AL104 cipher or AL1-04(Anikin Luke cipher)")		
+        return "AL104 cipher or AL1-04(Anikin Luke Cipher)"
 
 
 def main():
